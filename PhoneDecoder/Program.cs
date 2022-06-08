@@ -22,6 +22,9 @@ public static class PhoneDecoder
 
     public static async Task Main()
     {
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+        
         // Word List
         var encodedWordList = new DictModel();
         const string fileName = "EnglishWords.json";
@@ -29,8 +32,6 @@ public static class PhoneDecoder
         var dictWords = await JsonSerializer.DeserializeAsync<DictModel>(openStream);
 
         // Encode
-        var stopwatch = new Stopwatch();
-        stopwatch.Start();
         const string textString = "A random test string of varying length, and a random large word... superseding";
         var encodedString = EncodeString(textString);
 
@@ -40,13 +41,10 @@ public static class PhoneDecoder
         }
         
         Console.WriteLine($"Processing Time: {stopwatch.ElapsedMilliseconds:N0}ms");
-        
         Console.WriteLine($"Clean String: {textString}\nEncoded String: {encodedString}\nFormat: (WordIndex: FoundWord)");
         
         // Decode
-        var cultureInfo = new CultureInfo("en-US", false).TextInfo;
         var wordIndex = 0;
-
         var words = encodedString.Split('0');
 
         foreach (var word in words)
