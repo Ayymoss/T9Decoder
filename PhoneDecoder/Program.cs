@@ -34,7 +34,8 @@ public static class PhoneDecoder
         // Encode
         const string textString = "A random test string of varying length, and a random large word... superseding";
         var encodedString = EncodeString(textString);
-
+        Console.WriteLine("Encoding word list...");
+        
         foreach (var word in dictWords.EnglishWords)
         {
             encodedWordList.EnglishWordsEncoded.Add(word, EncodeString(word));
