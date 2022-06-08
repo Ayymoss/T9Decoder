@@ -3,37 +3,23 @@ My solution for T9 Encoding/Decoding
 
 Example output from solution:
 ```
-Clean String: This is a test string to figure out.
-Encoded String: 84470470208378078746408603448730688
-Format: (WordIndex:GuessIndex: FoundWord)
-0:0: Ughs
-0:0: This
-0:0: Thir
-1:0: Gp
-1:1: Gs
-1:1: Hs
-1:3: Gr
-1:4: Hr
-1:4: Ir
-1:4: Hq
-1:7: Hp
-1:7: Is
-1:7: Iq
-2:0: A
-2:1: B
-2:2: C
-3:0: Test
-3:1: Vert
-3:2: Vest
-4:0: String
-5:0: Tm
-5:0: Tn
-5:1: Vo
-5:1: Um
-5:2: To
-5:3: Un
-6:0: Figure
-7:0: Mut
-7:0: Nut
-7:2: Out
+Encoding word list...
+Processing Time: 1,611ms
+Clean String: A random test string of varying length, and a random large word... superseding
+Encoded String: 20726366083780787464063082794640536484026302072636605274309673078737733464
+Format: (WordIndex: FoundWord)
+0: a, b, c
+1: random, randon, samfoo
+2: test, vert, vest
+3: string
+4: md, me, mf, nd, ne, od, oe, of
+5: varying
+6: length
+7: ame, and, ane, bnf, bod, boe, cmd, cod, coe
+8: a, b, c
+9: random, randon, samfoo
+10: large, larid
+11: yore, word, wore
+12: superseding
+Processing Time: 1,729ms
 ```
